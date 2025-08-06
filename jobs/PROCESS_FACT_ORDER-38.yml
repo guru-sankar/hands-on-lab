@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "38"
+includeSelector: "+{ location: TARGET name: FCT_ORDERS_LINEITEM }"
+name: PROCESS_FACT_ORDER
+type: Job
