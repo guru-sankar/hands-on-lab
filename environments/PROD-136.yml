@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "136"
+mappingDefinitions:
+  SRC:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF10
+  TARGET:
+    database: MIPTEST_DB
+    schema: GURU_PROD
+name: PROD
+type: Environment
