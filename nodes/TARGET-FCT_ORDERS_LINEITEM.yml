@@ -126,6 +126,7 @@ operation:
         config: {}
         dataType: NUMBER(38,0)
         description: ""
+        isBusinessKey: true
         name: ORDER_ORDERKEY
         nullable: false
         sourceColumnReferences:
@@ -350,6 +351,7 @@ operation:
         config: {}
         dataType: NUMBER(38,0)
         description: ""
+        isBusinessKey: true
         name: LINEITEM_LINENUMBER
         nullable: false
         sourceColumnReferences:

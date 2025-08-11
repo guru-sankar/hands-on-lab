@@ -154,10 +154,13 @@ operation:
           - locationName: SRC
             nodeName: ORDERS
         join:
-          joinCondition: |
+          joinCondition: |-
             FROM {{ ref('SRC', 'ORDERS') }} "ORDERS"
+            WHERE "ORDERS"."O_ORDERDATE" >=  (SELECT MAX(ORDER_ORDERDATE) FROM {{ ref_no_link('TARGET', 'FCT_ORDERS_LINEITEM') }} )
         name: STG_ORDERS
-        noLinkRefs: []
+        noLinkRefs:
+          - locationName: TARGET
+            nodeName: FCT_ORDERS_LINEITEM
   name: STG_ORDERS
   overrideSQL: false
   schema: ""
